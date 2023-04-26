@@ -3,7 +3,7 @@ requests
 beautifulsoup4
 pandas
 nltk
-re
+
 stopwords
 word_tokenize
 pipeline
