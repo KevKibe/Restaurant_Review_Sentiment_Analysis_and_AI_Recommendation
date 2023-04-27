@@ -5,7 +5,8 @@ beautifulsoup4
 pandas
 nltk
 tensorflow
-pytorch
+torch 
+torchvision
 stopwords
 transformers
 pipeline
