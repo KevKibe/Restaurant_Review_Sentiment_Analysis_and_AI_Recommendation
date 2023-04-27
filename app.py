@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import nltk
 import re
+import openai
 import matplotlib.pyplot as plt
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
@@ -68,11 +69,35 @@ def sentiment_analysis(texts):
     results = classifier(texts)
     
     return results
+def generate_summary(text_list):
+    
 
+    # Define prompt for GPT-3
+    prompt = (f"I have text containing negative reviews: {text_list}. Can you summarize them?")
+    
+    # Use OpenAI's GPT-3 to generate solutions based on input text
+    response = openai.Completion.create( model="text-davinci-003", prompt=prompt, max_tokens=500,temperature=0)
+    
+    # Extract the generated text from the API response
+    solution = response.choices[0].text.strip()
+    
+    return solution
 
+def generate_solution( text_list):
+
+    # Define prompt for GPT-3
+    prompt = (f"I have a variable containing negative reviews: {text_list}. Can you recommend a solution?")
+    
+    # Use OpenAI's GPT-3 to generate solutions based on input text
+    response = openai.Completion.create( model="text-davinci-003", prompt=prompt, max_tokens=1024,temperature=0)
+    
+    # Extract the generated text from the API response
+    solution = response.choices[0].text.strip()
+    
+    return solution
 
 # Add a title to the app
-st.title("Restaurant Reviews Sentiment Analysis")
+st.title("Restaurant Reviews Sentiment Analysis and Recommendations")
 
 # Get the restaurant URL from the user
 url = st.text_input("Enter the TripAdvisor URL for the restaurant:")
@@ -106,3 +131,14 @@ if st.button("Submit"):
     ax.pie(summary, labels=summary.index, autopct='%1.1f%%', startangle=90, colors=['#008080', '#E9967A'])
     ax.legend(title="Sentiment", loc="center right", bbox_to_anchor=(1, 0, 0.5, 1))
     st.pyplot(fig)
+
+    negative_reviews = reviews_df[reviews_df['sentiment']=='NEGATIVE']['review'].tolist()
+    summary = generate_summary(negative_reviews)
+    st.write("Summary of negative reviews:")
+    st.write(summary)
+     
+    recommendation = generate_solution(summary)
+    st.write("Recommendation:")
+    st.write(recommendation)
+
+
