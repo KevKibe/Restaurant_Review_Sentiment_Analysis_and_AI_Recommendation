@@ -12,7 +12,7 @@ from transformers import pipeline
 from nltk.stem import SnowballStemmer
 nltk.download('stopwords')
 nltk.download('punkt')
-
+openai.api_key = st.secrets["openai_api_key"]
 
 def get_reviews(url):
     user_agent = ({'User-Agent':
