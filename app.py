@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import nltk
 import re
+import matplotlib as plt
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from transformers import pipeline
