@@ -11,4 +11,4 @@ stopwords
 transformers
 pipeline
 SnowballStemmer
-
+matplotlib
