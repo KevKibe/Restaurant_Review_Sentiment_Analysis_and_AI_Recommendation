@@ -4,7 +4,8 @@ requests
 beautifulsoup4
 pandas
 nltk
-
+tensorflow
+pytorch
 stopwords
 transformers
 pipeline
