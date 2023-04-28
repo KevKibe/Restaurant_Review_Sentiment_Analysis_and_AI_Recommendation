@@ -8,7 +8,17 @@ You can find restaurant reviews from https://www.tripadvisor.com/.<br>
 <li>Openai GPT3 for review summary and recommendation generation<br>
 
 # Use Case
-A review of The Carnivore Restaurant in Nairobi. https://www.tripadvisor.com/Restaurant_Review-g294207-d809397-Reviews-The_Carnivore_Restaurant-Nairobi.html <br>
+A review of Mawimbi Seafood Restaurant in Nairobi.<br>
+https://www.tripadvisor.com/Restaurant_Review-g294207-d20151172-Reviews-Mawimbi_Seafood_Restaurant-Nairobi.html <br>
+![image](https://user-images.githubusercontent.com/86055894/235083012-e1a02820-d7d6-4718-b407-53d546b14bf0.png)<br>
+<li>The restaurant has a total of 965 reviews.<br>
+
+![image](https://user-images.githubusercontent.com/86055894/235084586-797e484c-4a3d-483c-9da8-75349282420d.png)
+
+
+![image](https://user-images.githubusercontent.com/86055894/235083565-8c9cb83a-83e4-4e82-8e06-c9b2237ba51b.png)
+
+![image](https://user-images.githubusercontent.com/86055894/235084209-ee2bb31b-41b2-4e49-80ba-a703a1b3a8ae.png)
 
 
 
