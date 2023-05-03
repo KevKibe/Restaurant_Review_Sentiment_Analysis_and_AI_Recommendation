@@ -86,7 +86,7 @@ def generate_summary(text_list):
 def generate_solution( text_list):
 
     # Define prompt for GPT-3
-    prompt = (f"I have a variable containing negative reviews: {text_list}. Can you recommend a solution?")
+    prompt = (f"I have a variable containing negative reviews: {text_list}. Recommend solutions for the negative reviews and summarize the recommendations in pointers")
     
     # Use OpenAI's GPT-3 to generate solutions based on input text
     response = openai.Completion.create( model="text-davinci-003", prompt=prompt, max_tokens=1024,temperature=0)
