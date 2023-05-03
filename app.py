@@ -76,7 +76,7 @@ def generate_summary(text_list):
     prompt = (f"I have text containing negative restaurant reviews.{text_list}. Summarize the reviews into pointers.")
     
     # Use OpenAI's GPT-3 to generate solutions based on input text
-    response = openai.Completion.create( model="gpt-3.5-turbo-0301", prompt=prompt, max_tokens=500,temperature=0)
+    response = openai.Completion.create( model="text-davinci-003", prompt=prompt, max_tokens=500,temperature=0)
     
     # Extract the generated text from the API response
     solution = response.choices[0].text.strip()
