@@ -5,7 +5,7 @@ You can find restaurant reviews from https://www.tripadvisor.com/.<br>
 <li>BeautifulSoup for scraping reviews. 
 <li>NLTK for text processing.
 <li>DistilBERT for Sentiment Analysis.
-<li>Openai GPT3 for review summary and recommendation generation<br>
+<li>Openai language models for review summary and recommendation generation<br>
 
 # Use Case
 A review of Mawimbi Seafood Restaurant in Nairobi.<br>
